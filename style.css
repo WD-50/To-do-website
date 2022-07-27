@@ -1,0 +1,97 @@
+body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(140, 181, 194);
+    color: white;
+}
+
+.list, .app{
+    text-align: center;
+    background-color: rgb(13, 148, 172);
+    width: 85vw;
+    box-sizing: border-box;
+    border-radius: 2rem;
+    height: max-content;
+}
+
+.item{
+    font-size: larger;
+}
+
+.check{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.check:hover{
+    background-color: green;
+}
+
+.delete{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.delete:hover{
+    background-color: rgb(255, 85, 85);
+}
+
+li:hover .check{
+    visibility: visible;
+}
+
+li:hover .delete{
+    visibility: visible;
+}
+
+svg{
+    fill: white;
+}
+
+span.checked{
+    text-decoration: line-through;
+}
+
+button.checked{
+    background-color: gray;
+}
+
+button.checked:hover{
+    background-color: gray;
+}
+
+.add{
+    width: 2rem;
+    height: 2rem;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add:hover{
+    background-color: green;
+}
+
+h1{
+    display: inline-block;
+}
+
+@media (pointer:none), (pointer:coarse) {
+    .check, .delete{
+        visibility: visible;
+    }
+}
