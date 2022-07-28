@@ -6,6 +6,10 @@ body{
     color: white;
 }
 
+span.i-content{
+    cursor: ns-resize;
+}
+
 .list, .app{
     text-align: center;
     background-color: rgb(13, 148, 172);

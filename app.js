@@ -37,11 +37,36 @@ function renderList(){
         }
         if (index != list.length - 1){
             span1.addEventListener('click', (e) => {
+                let at = index + 1;
                 e.preventDefault();
+                if (e.altKey){
+                    const input = prompt("Please enter a list index");
+                    if (input < 1 || input > list.length){
+                        alert("Invalid list number!");
+                        return;
+                    }else{
+                        at = input - 1;
+                    }
+                }
                 list.splice(index, 1);
-                list.splice(index + 1, 0, item);
+                list.splice(at, 0, item);
                 renderList();
                 updateLS();
+            }, false);
+        }else{
+            span1.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (e.altKey){
+                    const input = prompt("Please enter a list index");
+                    if (input < 1 || input > list.length){
+                        alert("Invalid list number!");
+                        return;
+                    }
+                    list.splice(index, 1);
+                    list.splice(input - 1, 0, item);
+                    renderList();
+                    updateLS();
+                }
             }, false);
         }
         if (checkedItems.includes(item)){
