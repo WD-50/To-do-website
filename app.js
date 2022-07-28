@@ -26,6 +26,24 @@ function renderList(){
         listItem.appendChild(span1);
         listItem.appendChild(span2);
         todo.appendChild(listItem);
+        if (index != 0){
+            span1.addEventListener('contextmenu', (e) => {
+                e.preventDefault();
+                list.splice(index, 1);
+                list.splice(index - 1, 0, item);
+                renderList();
+                updateLS();
+            }, false);
+        }
+        if (index != list.length - 1){
+            span1.addEventListener('click', (e) => {
+                e.preventDefault();
+                list.splice(index, 1);
+                list.splice(index + 1, 0, item);
+                renderList();
+                updateLS();
+            }, false);
+        }
         if (checkedItems.includes(item)){
             span1.classList.toggle("checked");
             span1.nextElementSibling.firstChild.classList.toggle("checked");

@@ -49,6 +49,16 @@ body{
     background-color: rgb(255, 85, 85);
 }
 
+.move{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
 li:hover .check{
     visibility: visible;
 }
@@ -63,6 +73,7 @@ svg{
 
 span.checked{
     text-decoration: line-through;
+    text-decoration-color: red;
 }
 
 button.checked{
@@ -94,4 +105,8 @@ h1{
     .check, .delete{
         visibility: visible;
     }
+}
+
+.hint{
+    font-size: small;
 }
