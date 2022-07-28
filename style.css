@@ -74,6 +74,7 @@ svg{
 span.checked{
     text-decoration: line-through;
     text-decoration-color: red;
+    text-decoration-thickness: 4px;
 }
 
 button.checked{
